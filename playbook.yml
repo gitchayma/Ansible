@@ -1,0 +1,32 @@
+- name: playbook-chayma
+
+  hosts: ec2
+
+  become: true
+
+  tasks:
+    - name: Installer Node.js et npm
+      apt:
+        name: ["node.js", "npm"]
+        state: present
+
+    - name: Clonner le référentiel Gatsby
+      git:
+        repo: ["node.js", "npm"]
+        dest: present
+        update: true   
+
+    - name: Installer les dépendances
+      command: npm install
+      arg: 
+        chdir: chemin ver mon sit gatsby
+
+    - name: construire le site Gatsby
+      command: npm run build
+      arg: 
+        chdir: chemin ver mon sit gatsby
+
+    - name: démarer le site Gatsby
+      command: npm run start
+      arg: 
+        chdir: chemin ver mon sit gatsby
