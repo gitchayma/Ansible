@@ -1,6 +1,6 @@
-- name: playbook-chayma
+- name: installation-gatsby
 
-  hosts: ec2
+  hosts: targetes
 
   become: true
 
@@ -14,7 +14,7 @@
       git:
         repo: ["node.js", "npm"]
         dest: https://github.com/gatsbyjs/gatsby-starter-default
-        update: true   
+        update: true
 
     - name: Installer les dépendances
       command: npm install
@@ -26,7 +26,7 @@
       arg: 
         chdir: ./gatsby-cli
 
-    - name: démarer le site Gatsby
+    - name: démarer le serveur Gatsby
       command: npm run start
       arg: 
         chdir: ./gatsby-cli
