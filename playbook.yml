@@ -13,20 +13,20 @@
     - name: Clonner le référentiel Gatsby
       git:
         repo: ["node.js", "npm"]
-        dest: present
+        dest: https://github.com/gatsbyjs/gatsby-starter-default
         update: true   
 
     - name: Installer les dépendances
       command: npm install
       arg: 
-        chdir: chemin ver mon sit gatsby
+        chdir: ./gatsby-cli
 
     - name: construire le site Gatsby
       command: npm run build
       arg: 
-        chdir: chemin ver mon sit gatsby
+        chdir: ./gatsby-cli
 
     - name: démarer le site Gatsby
       command: npm run start
       arg: 
-        chdir: chemin ver mon sit gatsby
+        chdir: ./gatsby-cli
