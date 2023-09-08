@@ -5,29 +5,20 @@
   become: true
 
   tasks:
+
     - name: Installer Node.js et npm
-      apt:
-        name: ["node.js", "npm"]
+      ansible.builtin.yum:                    #https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_module.html
+        name:
+          - gcc-c++
+          - make
         state: present
 
-    - name: Clonner le référentiel Gatsby
-      git:
-        repo: ["node.js", "npm"]
-        dest: https://github.com/gatsbyjs/gatsby-starter-default
-        update: true
+    - name: Installer Nodejs
+      ansible.builtin.yum:
+        name:
+          - nodejs
 
-    - name: Installer les dépendances
-      command: npm install
-          arg: 
-          chdir: ./gatsby-cli
-##
-    - name: construire le site Gatsby
-      command: npm run build
-        arg: 
-        chdir: ./gatsby-cli
-##
-    - name: démarer le serveur Gatsby
-      command: npm run start
-        arg: 
-        chdir: ./gatsby-cli
-##
+##    - name: Installer gatsby-cli
+##      npm:
+##        name:
+##          - gatsby-cli 
