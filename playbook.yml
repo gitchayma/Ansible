@@ -17,8 +17,7 @@
       ansible.builtin.yum:
         name:
           - nodejs
-
-##    - name: Installer gatsby-cli
-##      npm:
-##        name:
-##          - gatsby-cli 
+    - name: Installer gatsby-cli
+      npm:
+        name: gatsby-cli
+        
