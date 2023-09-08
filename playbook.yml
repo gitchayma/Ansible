@@ -16,17 +16,18 @@
         dest: https://github.com/gatsbyjs/gatsby-starter-default
         update: true
 
-    - name: Installer les dépendances
-      command: npm install
-      arg: 
-        chdir: ./gatsby-cli
-
-    - name: construire le site Gatsby
-      command: npm run build
-      arg: 
-        chdir: ./gatsby-cli
-
-    - name: démarer le serveur Gatsby
-      command: npm run start
-      arg: 
-        chdir: ./gatsby-cli
+##    - name: Installer les dépendances
+##      command: npm install
+##      arg: 
+##        chdir: ./gatsby-cli
+##
+##    - name: construire le site Gatsby
+##      command: npm run build
+##      arg: 
+##        chdir: ./gatsby-cli
+##
+##    - name: démarer le serveur Gatsby
+##      command: npm run start
+##      arg: 
+##        chdir: ./gatsby-cli
+##
