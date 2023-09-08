@@ -20,4 +20,5 @@
     - name: Installer gatsby-cli
       npm:
         name: gatsby-cli
+        global: yes
         
