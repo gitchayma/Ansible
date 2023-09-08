@@ -7,7 +7,7 @@
   tasks:
 
     - name: Installer Node.js et npm
-      ansible.builtin.yum:                    #https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_module.html
+      ansible.builtin.yum:
         name:
           - gcc-c++
           - make
